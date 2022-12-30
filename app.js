@@ -1,6 +1,8 @@
 // Fucntion for getting User's choice
 const getUserChoice = userInput => {
-  userInput = userInput.toLowerCase();
+  // created a variable to convert all input to lowercase
+  let userInput = userInput.toLowerCase();
+  // added an if statement to check user input
   if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
     return userInput
   } else {
@@ -8,12 +10,15 @@ const getUserChoice = userInput => {
   }
 };
 
+// testing user input
 console.log(getUserChoice('rock'));
 console.log(getUserChoice('pap'));
 
 // Fucntion for getting Computer's choice
 const getComputerChoice = () => {
+  // created a variable to generate a random whole number between 0 and 2.
   let randomNumber = Math.floor(Math.random() * 3);
+  // switch statement to check what random number is generated
   switch (randomNumber) {
     case 0:
       return 'rock';
@@ -31,6 +36,7 @@ const getComputerChoice = () => {
 
 // Fucntion for determining winner
 const determineWinner = (userChoice, computerChoice) => {
+  // if statements to check user choice versus computer choice
   if (userChoice === computerChoice) {
     return 'Game was a tie!';
   }
